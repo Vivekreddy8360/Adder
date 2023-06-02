@@ -42,15 +42,36 @@ Carry = AB + ACin+BCin
 
 
 ## Program:
-
-
+~~~
+Developed by: M.vivek reddy
+Reg no: 212221240030
+~~~
+## Half Adder
+```
+module Adder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
+```
 ## RTL Schematic:
-
-
-
-
+![image](https://github.com/Vivekreddy8360/Adder/assets/94525701/7f02672e-6ec9-440d-85f0-8c04f1e42945)
 ## Timing Diagram:
-
+![image](https://github.com/Vivekreddy8360/Adder/assets/94525701/5998a21b-2a13-4d2f-9437-786141487feb)
+## Full Adder
+```
+module FullAdder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum = ((a^b)^c);
+assign carry = ((a&b)|(b&c)|(c&a));
+endmodule
+```
+## RTL Schematic:
+![image](https://github.com/Vivekreddy8360/Adder/assets/94525701/143f7e75-4905-4520-bfa1-2bf01055d199)
+## Timing Diagram
+![image](https://github.com/Vivekreddy8360/Adder/assets/94525701/ebbb0c20-6aa9-4746-b3fc-b1dcbf5c3ff5)
 
 ## Result:
 Thus the half adder and full adder circuits are designed and implemented and the truth tables are verified.
